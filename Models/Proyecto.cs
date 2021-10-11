@@ -219,17 +219,24 @@ namespace Proyecto1.Models
         {
             double resultado = 0.0;
             resultado = ((CantidadDeDormitorios + CantidadDeBanosCompletos + CantidadDeMediosBanos +
-                getIntTerraza() + getIntTipoDePiso() + getIntMuebleDeCocina()) + 
+                getIntTerraza() + getIntTipoDePiso() + getIntMuebleDeCocina()) +
                 (getIntSalaEstaIntegradaConLaCocina() + getIntAreaDePilasEsAbierta() +
-                getIntMetrosDeConstruccionAproximado())) * 20000; 
+                getIntMetrosDeConstruccionAproximado())) * 20000;
             return resultado;
         }//fin getDoubleCostoAproximadoPorMetroCuadrado
         //GetInformacionObjetoCliente
         public string GetInformacionObjetoProyecto()
         {
             return "Información del proyecto*\nID = " + this.intIDProyecto + 
-                ", \nNombre Completo = " + this.strNombreCompleto + ", " +
-                "\nTelefono = " + this.strNombreCompleto;
+                ", \nCantidad de dormitorios = " + this.intCantidadDeDormitorios + ", " +
+                ", \nCantidad de banos completos = " + this.intCantidadDeBanosCompletos + ", " +
+                ", \nCantidad de medios banos = " + this.intCantidadDeMediosBanos + ", " +
+                ", \nTerraza = " + this.strTerraza + ", " +
+                ", \nTipo de piso = " + this.strTipoDePiso + ", " +
+                ", \nMuebles de cocina = " + this.strMuebleDeCocina + ", " +
+                ", \nLa sala esta integrada con la cocina = " + this.boolSalaEstaIntegradaConLaCocina + ", " +
+                ", \nEl area de pilas es abierta = " + this.boolAreaDePilasEsAbierta + ", " +
+                ", \nCosto aproximado por metro cuadrado = " + this.doubleCostoAproximadoPorMetroCuadrado;
         }//fin GetInformacionObjetoCliente
     }//fin clase Proyecto
 }//fin Proyecto1
